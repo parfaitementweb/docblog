@@ -5,7 +5,7 @@ namespace Parfaitementweb\DocBlog;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
-class DocblogServiceProvider extends ServiceProvider
+class DocBlogServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
