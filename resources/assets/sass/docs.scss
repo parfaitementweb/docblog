@@ -1,0 +1,243 @@
+@import '_variables_colors';
+
+$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$font-size-base: .9rem;
+@import "_bootstrap";
+@import "_navbar";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: #f3f5f9;
+}
+
+.hero {
+    background-color: $primary;
+
+    .title {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        padding-top: 30px;
+        color: #fff;
+        padding-bottom: 20px;
+
+        h1 {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 500;
+        }
+
+        .meta {
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.sidebar {
+    h2 {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #337ab7;
+    }
+
+    .search {
+        margin: 2rem 0 1.5em;
+    }
+
+    .tags {
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 0.2rem;
+
+                a {
+                    text-decoration: none;
+                    color: #7e798f;
+                }
+
+                a:hover {
+                    color: #F65A3F;
+                }
+            }
+        }
+    }
+
+}
+
+.main {
+    background-color: #fff;
+    min-height: calc(100vh - 70px);
+}
+
+article, section {
+    padding-top: 1rem;
+
+    p {
+        color: #222;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .content {
+        margin-top: 1.5em;
+
+        pre {
+            padding: 1rem;
+            display: block;
+            margin: 1rem 0;
+            background-color: #dedede;
+            color: #555;
+            border-radius: 3px;
+        }
+    }
+
+    .navigation {
+        margin: 3em auto;
+        font-size: 80%;
+
+        a {
+            color: #3f6fb9;
+            text-decoration: none;
+        }
+
+        a:hover, a:focus, a:active {
+            color: #2c4d80;
+        }
+    }
+
+    .content strong {
+        font-weight: 400;
+    }
+
+    .content a {
+        color: #222;
+        text-decoration: underline;
+    }
+
+    .content a:hover, .content a:focus {
+        color: #F65A3F;
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 640px) {
+        .content {
+            max-width: 100%;
+        }
+    }
+
+    .title {
+        h1 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin: 0;
+            font-weight: 700;
+            color: #337ab7;
+            line-height: 1.2;
+        }
+    }
+
+    h2.category {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin: 1em 0 0.5em;
+
+        font-weight: 700;
+        color: #337ab7;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h3.doc-title {
+        font-weight: 400;
+        font-size: 1rem;
+
+        margin: 0 0 0.5rem;
+
+        a {
+            color: #3f6fb9;
+            text-decoration: none;
+        }
+
+        a:hover, a:focus, a:active {
+            color: #627191;
+        }
+    }
+
+    //h1 {
+    //    font-size: 38px;
+    //    font-weight: 500;
+    //    line-height: 49px;
+    //    margin-bottom: 10px;
+    //    margin-top: 20px;
+    //}
+
+    h2 {
+        //font-size: 28px;
+        //line-height: 38px;
+        margin: 1.1em 0 .8em;
+        color: #1d2b36;
+        //letter-spacing: .2px;
+
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin: 1.5em 0 .5em;
+        font-weight: 500;
+        letter-spacing: .2px;
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 2.5em auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border: 1px solid #ddd;
+    }
+
+    ul, ol {
+        list-style: initial;
+        padding-left: 40px;
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .no-margin li {
+            margin-bottom: 0;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.breadcrumb {
+    margin-top: 2rem;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 13px;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: $white;
+    padding-left: 0;
+    padding-top: 0;
+
+    a:hover, a:focus, a:active {
+        color: #F65A3F;
+    }
+}

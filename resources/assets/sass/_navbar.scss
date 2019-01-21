@@ -1,0 +1,22 @@
+.navbar {
+    transition: background-color .2s;
+
+    .nav-item {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .brand-name, .brand-name-semibold, .brand-name-bold {
+        font-family: 'Rubik', sans-serif;
+        color: #000;
+    }
+
+    &.navbar-trans {
+        background: transparent;
+        border: none;
+
+        &.collapsed {
+            background-color: $primary !important;
+        }
+    }
+}

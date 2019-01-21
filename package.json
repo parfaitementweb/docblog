@@ -1,0 +1,11 @@
+{
+  "name": "docblog",
+  "version": "1.0.0",
+  "description": "Documentation & Blog Package for Laravel",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.2.1"
+  }
+}
