@@ -22,6 +22,12 @@ RESPONSE_CACHE_ENABLED=true
 SCOUT_DRIVER=tntsearch
 ```
 
+Add to your package.json
+
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3",
+    "popper.js": "^1.14.4",
+
 Add to your webpack.mix.js
 
 ```
@@ -33,7 +39,7 @@ Add to your webpack.mix.js
 Install dependencies
 
 ```
-cd /vendor/parfaitementweb/docblog
+cd ./vendor/parfaitementweb/docblog
 npm install
 ```
 
