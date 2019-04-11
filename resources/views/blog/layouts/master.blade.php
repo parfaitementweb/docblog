@@ -95,7 +95,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a class="navbar-brand" href="{{locale_url('/')}}?utm_source=website&utm_content=blog"><img src="{{asset(config('docblog.logo'))}}" height="30" alt="{{ config('docblog.name') }}" class="d-inline-block"> {{config('docblog.name')}}</a>
+            <a class="navbar-brand" href="{{locale_url('/')}}?utm_source=website&utm_content=blog"><img src="{{asset(config('docblog.logo'))}}" height="30" class="d-inline-block"> {{config('docblog.name')}}</a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 @include('docblog::blog.menu')
             </div>

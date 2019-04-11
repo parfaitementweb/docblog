@@ -49,6 +49,11 @@ Migrate Database
 php artisan migrate
 ```
 
+Seeds the database (optional)
+```
+php artisan db:seed --class=\\Parfaitementweb\\DocBlog\\Database\\Seeds\\DatabaseSeeder
+```
+
 ## Configuration
 
 Edit `docblog.php`

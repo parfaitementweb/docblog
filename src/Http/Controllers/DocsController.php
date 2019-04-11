@@ -11,7 +11,7 @@ class DocsController extends Controller
 {
     public function index()
     {
-        $docs = Doc::where('published->' . app()->getLocale(), true)->orderBy('publish_date', 'desc')->get()->sortBy(function ($item, $key) {
+        $docs = Doc::where('published->' . app()->getLocale(), true)->where('redirect', null)->orderBy('publish_date', 'desc')->get()->sortBy(function ($item, $key) {
             if ($item->tags->first()) {
                 return $item->tags->first()->order_column;
             }
@@ -37,6 +37,11 @@ class DocsController extends Controller
 
         if (! $doc->getTranslation('published', app()->getLocale()) && ! auth()->check()) {
             abort(404);
+        }
+
+        if ($doc->redirect) {
+            $redirectedTo = Doc::find($doc->redirect);
+            return redirect($redirectedTo->url(app()->getLocale()));
         }
 
         $seo['title'] = $this->seoTitle($doc);

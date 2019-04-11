@@ -37,6 +37,7 @@
     "autoload-dev": {
         "psr-4": {
             "Parfaitementweb\\DocBlog\\Tests\\": "tests"
+            "Parfaitementweb\\DocBlog\\Tests\\": "tests"
         }
     },
     "extra": {

@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function index(Request $request)
     {
-        $posts = Post::where('published->' . app()->getLocale(), true)->orderBy('publish_date', 'desc')->simplePaginate(10);
+        $posts = Post::where('published->' . app()->getLocale(), true)->where('redirect', null)->orderBy('publish_date', 'desc')->simplePaginate(10);
         return view('docblog::blog.index', compact('posts'));
     }
 
@@ -20,6 +20,11 @@ class BlogController extends Controller
 
         if ( ! $post->getTranslation('published', app()->getLocale()) && !auth()->check()) {
             abort(404);
+        }
+
+        if ($post->redirect) {
+            $redirectedTo = Post::find($post->redirect);
+            return redirect($redirectedTo->url(app()->getLocale()));
         }
 
         $seo['title'] = $this->seoTitle($post);

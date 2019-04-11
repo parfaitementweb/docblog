@@ -58,6 +58,19 @@
                         <div class="invalid-feedback">{{ $errors->first('breadcrumb_title') }}</div>
                     @endif
                 </div>
+                <div class="form-group">
+                    <label for="redirect">Redirect 301</label>
+
+                    <select class="form-control {{ ($errors->has('redirect')) ? 'is-invalid': ''}}" name="redirect" id="redirect">
+                        <option value="" {{ (old('redirect', $post->redirect) == null) ? 'selected':'' }}>None</option>
+                        @foreach(\Parfaitementweb\DocBlog\Models\Post::all() as $all_blog)
+                            <option value="{{$all_blog->id}}" {{ (old('redirect', $post->redirect) == $all_blog->id) ? 'selected':'' }}>{{$all_blog->getTranslationWithFallback('title', $lang)}}</option>
+                        @endforeach
+                    </select>
+                    @if($errors->has('redirect'))
+                        <div class="invalid-feedback">{{ $errors->first('redirect') }}</div>
+                    @endif
+                </div>
             </div>
         </div>
 

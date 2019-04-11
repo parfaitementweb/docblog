@@ -40,6 +40,7 @@ class DocsController extends Controller
             'seo_title' => 'present',
             'seo_description' => 'present',
             'breadcrumb_title' => 'present',
+            'redirect' => 'present',
             'upload' => 'file|image',
         ]);
 
@@ -78,6 +79,7 @@ class DocsController extends Controller
             'seo_title' => 'present',
             'seo_description' => 'present',
             'breadcrumb_title' => 'present',
+            'redirect' => 'present',
             'upload' => 'file|image',
         ]);
 

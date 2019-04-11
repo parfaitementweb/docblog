@@ -72,6 +72,7 @@ class Doc extends Model implements Feedable, HasMedia
         $this->setTranslation('seo_description', $attributes['lang'], (! empty($attributes['seo_description'])) ? $attributes['seo_description'] : null);
         $this->setTranslation('breadcrumb_title', $attributes['lang'], (! empty($attributes['breadcrumb_title'])) ? $attributes['breadcrumb_title'] : null);
         $this->setTranslation('published', $attributes['lang'], isset($attributes['published']) ? true : false);
+        $this->redirect = $attributes['redirect'] ?: null;
         $this->author = $attributes['author'];
         $this->publish_date = $attributes['publish_date'];
 

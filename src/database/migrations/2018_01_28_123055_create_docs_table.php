@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateDocsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,19 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('docs', function (Blueprint $table) {
             $table->increments('id');
             $table->text('title');
             $table->text('slug');
-            $table->text('excerpt');
             $table->text('text');
             $table->text('seo_title')->nullable();
             $table->text('seo_description')->nullable();
+            $table->text('breadcrumb_title')->nullable();
             $table->datetime('publish_date');
             $table->text('published');
             $table->string('author')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -35,6 +36,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('docs');
     }
 }

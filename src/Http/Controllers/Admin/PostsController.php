@@ -40,6 +40,7 @@ class PostsController extends Controller
             'tags_text' => 'present',
             'seo_title' => 'present',
             'seo_description' => 'present',
+            'redirect' => 'present',
             'upload' => 'file|image',
         ]);
 
@@ -77,6 +78,7 @@ class PostsController extends Controller
             'tags_text' => 'present',
             'seo_title' => 'present',
             'seo_description' => 'present',
+            'redirect' => 'present',
             'upload' => 'file|image',
         ]);
 
