@@ -151,7 +151,7 @@
 
         <div class="form-group">
             <a href="{{ url($doc->url($lang))  }}" target="_blank"
-               class="btn btn-block btn-outline-primary {{(!$doc->getTranslationWithoutFallback('published', $lang) ? 'disabled' : '')}}">View post</a>
+               class="btn btn-block btn-outline-primary {{(!$doc->getTranslationWithoutFallback('slug', $lang) ? 'disabled' : '')}}">View post</a>
             <button type="submit" class="btn btn-primary btn-block">{{$submitText}}</button>
         </div>
 
