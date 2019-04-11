@@ -6,6 +6,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap": "^4.2.1"
+    "bootstrap": "^4.3.1"
   }
 }
